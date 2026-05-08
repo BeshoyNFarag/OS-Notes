@@ -1,0 +1,86 @@
+// Part 2 – Code Example: Simple Banking System in Java
+
+// File: BankAccount.java
+public class BankAccount {
+    private String owner;
+    private double balance;
+
+    public BankAccount(String owner, double balance) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    public double deposit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Deposit amount must be positive");
+        }
+        balance += amount;
+        return balance;
+    }
+
+    public double withdraw(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Withdrawal amount must be positive");
+        }
+        if (amount > balance) {
+            throw new IllegalArgumentException("Insufficient funds");
+        }
+        balance -= amount;
+        return balance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+}
+
+
+// File: BankAccountTest.java
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class BankAccountTest {
+
+    private BankAccount account;
+
+    @BeforeEach
+    public void setUp() {
+        account = new BankAccount("Alice", 100.0);
+    }
+
+    // Functional requirement tests
+    @Test
+    public void testDepositPositiveAmount() {
+        assertEquals(150.0, account.deposit(50.0));
+    }
+
+    @Test
+    public void testWithdrawValidAmount() {
+        assertEquals(50.0, account.withdraw(50.0));
+    }
+
+    @Test
+    public void testGetBalance() {
+        assertEquals(100.0, account.getBalance());
+    }
+
+    @Test
+    public void testDepositNegativeAmountThrows() {
+        assertThrows(IllegalArgumentException.class, () -> account.deposit(-10.0));
+    }
+
+    @Test
+    public void testWithdrawInsufficientFundsThrows() {
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(200.0));
+    }
+
+    @Test
+    public void testWithdrawNegativeAmountThrows() {
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(-20.0));
+    }
+}
