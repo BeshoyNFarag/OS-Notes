@@ -1,0 +1,14 @@
+in atomic operations we can interrupt it but no other threads or processes can 
+see its state.
+
+lock free DS: data thread type that does not block in case 
+it cannot acquire a key it just tries again later 
+(non blocking thread type)
+
+
+its the better of the worse, its not something that is dealt with usually
+and its better for a process or a thread, than being swept out of the process
+pool for now
+
+
+Rlocks --> one thread can only have one lock for multiple access
