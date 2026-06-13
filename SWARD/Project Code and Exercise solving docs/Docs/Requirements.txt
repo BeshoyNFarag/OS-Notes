@@ -1,0 +1,98 @@
+The app shall be packaged as a one package using docker, the front end and the backend are
+in the same directory as in the docker they are all in the same file.
+
+1. It must be playable solely in a browser, requiring no additional setup
+1. We need to support both desktop and mobile browsers and screen sizes
+2. It must be usable by two players playing a single concurrent game
+3. Players can place their marks on the 3x3 TicTacToe field, when it is their turn
+4. The game displays a message when the game is over. This message indicates the 
+winner or if the match resulted in a draw.
+5. Any player can reset the game to start a new match once a winner (or draw) has 
+been determined
+
+
+Personas:
+
+Persona1
+
+Name: Max Smith
+Quote related to our product: "I like to spend quality time even if i cannot do activities by physically being there"
+Age: 50
+Family Status: Married with 2 kids
+Education: Masters in business adminstration
+
+income level: 50K euros per year
+work Experience: 7 Years 
+
+location: Aschaffenburg
+device: Laptop Desktop
+
+pain points/ constraints: cannot download a game on the desktop, has only 30 minutes so time is limited.
+
+Enjoys: Playing simple games with his children, coffee, and Technological business solutions
+hates:  work life imbalance
+
+goal from the system: to play a simple video game from his work laptop with his kids
+scenario: i like to use my break time at work to spend some quality time with my kids, even a simple video game from my work
+laptop would do the trick, so that i dont feel that im isolating myself from my family.
+
+
+
+
+
+Persona2:
+
+
+Name: John Max Smith
+Age: 12
+Family status: a kid with one brother and both parents
+Education: middle school student
+
+income level: 0 
+work experience: middle school student, no work experience
+
+location: Aschaffenburg
+device: mobile phone
+
+pain points/ constraints: small screen so the mobile web version should look different, also has only 30 minutes
+
+enjoy: playing games on his phone, watching football, and playing football
+hates: long school days with the same routine, parents' lack of communication
+
+goal from the system: to play a simple video game from his phone during his school break with his father.
+scenario: i would love to play a simple video game during my break with my father, while being on a phone call
+
+
+
+
+Users Journey:
+
+User Journey – Max smith
+
+Goal:
+Play tictactoe with his kid
+
+1. User opens the TicTacToe website.
+2. User starts or joins a game.
+3. User waits for the other player.
+4. User places a mark when it is their turn.
+5. User observes the board updating after each move.
+6. User continues playing until the game ends.
+7. User sees the result (win, loss, or draw).
+8. User starts a new game or closes the application.
+
+
+
+User Journey – John Max smith
+
+Goal:
+Play tictactoe with his Father
+
+1. User opens the TicTacToe website.
+2. User starts or joins a game.
+3. User waits for the other player.
+4. User places a mark when it is their turn.
+5. User observes the board updating after each move.
+6. User continues playing until the game ends.
+7. User sees the result (win, loss, or draw).
+8. User starts a new game or closes the application.
