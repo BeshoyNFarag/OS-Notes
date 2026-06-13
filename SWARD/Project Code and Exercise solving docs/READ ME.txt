@@ -1,0 +1,26 @@
+# TicTacToe
+
+TicTacToe repository for Software Architecture and Design Patterns exercises.
+
+## Repository Owner
+
+*Enter your information here:*
+
+- Name: Beshoy Farag
+- Student-ID (Matrikelnummer): <Matrikelnummer here>
+- S-Number: s240750
+
+## Collaborators
+
+*Remove any of the following lines if you have fewer than 2 collaborators:*
+
+No collaborators
+
+## Structure of this repository
+
+1. Code is placed in the root repository path.
+1. Requirements, user documentation, ADRs, etc. are in markdown files in the `docs`-directory
+
+### Links to all documentation files
+
+*Add Links to the documentation files here*
