@@ -1,0 +1,68 @@
+# TeaStore - Frontend Type: SPA vs. Server-Side-Templating
+
+In this architectural decision, we decide the core technology of the TeaStore's Frontend.
+
+## 1. Context
+
+We sell Tea. Our users primarily use modern devices with modern iOS, Android Version >= 13 or desktop computers.
+
+For some reason 5% of our desktop users use command line browsers.
+
+We have no users using Opera Mini (e.g. Nintendo DS or ancient Windows CE devices).
+
+We sell to ~ 3 Million users per day, except for Christmas, we sell to 20 M users per day then.
+
+### 1.1. Constraints
+
+
+#### 1.1.1. Organizational
+
+We have 100 developers in 12 Teams and 2 external developer teams. The teams are distributed accross 5 time zones. We do waterfall.
+
+
+#### 1.1.2. Technological
+
+All our developers know Java. Backend-Language has been decided to be C# by management.
+
+We are deploying everything on Microsoft Azure Cloud.
+
+## 1.2. Quality Objectives
+
+1. Security
+2. Scalability
+3. Portability (Frontend)
+4. Usability (incl. SEO)
+
+## 2. Solution Alternatives
+
+1. Alternative 1: Single Page Application
+
+  We have a single page, consisting only of a lot of JavaScript. The Application interfaces with the backend via a self-defined API.
+
+2. Alternative 2: Templating
+
+  The Server creates static HTML sites and pre-fills them with the respective content for the user.
+
+## 3. Evaluation of Alternatives
+
+
+|           | SPA | Template |
+| --- | --- | --- |
+| Security        | - | + |
+| Scalability     | + | - |
+| Portability (FE)| - | 0 |
+| Usability       | + | 0 |
+| --- | --- | --- |
+| Command line usage | - | + |
+
+## 4. Decision
+
+Template because of higher Security and the command line users.
+
+## 5. Consequences
+
+Advantages: SEO Friendly, CLI friendly
+
+Disadvantage: Reduced Scalabiltiy
+
+Risks: $$$$ for Microsoft Azure
